@@ -14,9 +14,9 @@ namespace GuessMate.Helpers
 
             return color switch
             {
-                "Gray" => Brushes.LightGray,
-                "Yellow" => Brushes.Gold,
-                "Green" => Brushes.LightGreen,
+                "Gray" => new SolidColorBrush(Color.FromRgb(120, 124, 126)),
+                "Yellow" => new SolidColorBrush(Color.FromRgb(200, 179, 96)),
+                "Green" => new SolidColorBrush(Color.FromRgb(109, 169, 104)),
                 _ => Brushes.White
             };
         }

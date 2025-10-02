@@ -53,7 +53,7 @@ namespace GuessMate.ViewModels.Pages
             };
 
             for (int i = 0; i < WordLength; i++)
-                word.Letters.Add(new LetterEntry { Index = i, Character = "", Color = "Gray" });
+                word.Letters.Add(new LetterEntry { Index = i, Character = "", Color = "" });
 
             return word;
         }
