@@ -12,7 +12,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/ignYoqzii/GuessMate">
-    <img src="/Assets/GuessMateLogoFull.png" alt="GuessMate Logo" />
+    <img src="/GuessMate/Assets/GuessMateLogoFull.png" alt="GuessMate Logo" />
   </a>
 
   <h3 align="center">GuessMate</h3>
