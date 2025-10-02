@@ -23,7 +23,7 @@
   <br />
   <br />
   <a href="https://github.com/ignYoqzii/GuessMate">
-    <img src="/Assets/GuessMateScreenShot.png" alt="GuessMate Screenshot" />
+    <img src="/GuessMate/Assets/Screenshot1.png" alt="GuessMate Screenshot" />
   </a>
   <br />
   </p>
@@ -75,6 +75,10 @@ Theme = Dark
 - **Gray (absent)**: letter excluded (with correct handling for duplicates).
 
 The filtering algorithm includes special cases for duplicate letters and positional counts — add unit tests when modifying logic.
+
+  <a href="https://github.com/ignYoqzii/GuessMate">
+    <img src="/GuessMate/Assets/Screenshot2.png" alt="GuessMate Screenshot" />
+  </a>
 
 ## License
 
