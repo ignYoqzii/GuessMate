@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<ApplicationIcon>GuessMateLogo.ico</ApplicationIcon>
+		<UseWPF>true</UseWPF>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>GuessMate</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="Assets\valid-wordle-words.txt">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="GuessMateLogo.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3485.44" />
+		<PackageReference Include="WPF-UI" Version="4.0.3" />
+		<PackageReference Include="WPF-UI.DependencyInjection" Version="4.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.9" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0 " />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="Assets\AppHeader.jpg" />
+		<None Remove="Assets\GuessMateLogo.jpg" />
+		<None Remove="Assets\GuessMateLogoNoBG.png" />
+		<None Remove="Assets\valid-wordle-words.txt" />
+		<None Remove="Assets\YoqziiLogo.png" />
+		<None Remove="GuessMateLogo.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Assets\AppHeader.jpg">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Resource>
+		<Resource Include="Assets\GuessMateLogo.jpg">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Resource>
+		<Resource Include="Assets\GuessMateLogoNoBG.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Resource>
+		<Resource Include="Assets\YoqziiLogo.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Resource>
+	</ItemGroup>
+
+</Project>
