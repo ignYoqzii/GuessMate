@@ -2,11 +2,14 @@
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Text.Json;
+using GuessMate.Classes;
 
 namespace GuessMate.Services
 {
-    public class WordService
+    public class WordService(DashboardService dashboardService)
     {
+        private readonly DashboardService _dashboardService = dashboardService;
+
         private readonly string _wordsFilePath = Path.Combine(App.AppFolderPath, "Words.json");
         private static readonly JsonSerializerOptions _jsonOptions = new() { WriteIndented = true };
 
@@ -15,23 +18,19 @@ namespace GuessMate.Services
 
         public void AddWord(string newWord)
         {
+            var solution = _dashboardService.WordleSolution;
+
             var entry = new WordEntry
             {
                 Index = Words.Count + 1,
-                Word = newWord.ToUpper()
+                Word = newWord.ToUpper(),
+                // Fill the Letters list with correct colors
+                Letters = LetterColoring.ColorGuess(newWord, solution)
             };
-
-            for (int i = 0; i < newWord.Length; i++)
-            {
-                entry.Letters.Add(new LetterEntry
-                {
-                    Index = i,
-                    Character = newWord[i].ToString().ToUpper()
-                });
-            }
 
             Words.Add(entry);
         }
+
 
         public void ResetWords()
         {
